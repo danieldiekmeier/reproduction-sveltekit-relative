@@ -1,5 +1,13 @@
 # Reproduction: Deploying SvelteKit to a Subfolder
 
+## Update
+
+While this reproduction does show a bug in SvelteKit, it's not like I described below. I actually misconfigured the paths, like s3812497 described here: https://github.com/sveltejs/kit/issues/10358#issuecomment-1654297295
+
+With a fixed config, the problem does not occur.
+
+---
+
 Starting with SvelteKit 1.22.1, using `adapter-static` to deploy to a subfolder no longer works. It seems likely that the change from https://github.com/sveltejs/kit/releases/tag/%40sveltejs%2Fkit%401.22.1 is responsible:
 
 > perf: only have Vite generate relative paths when required

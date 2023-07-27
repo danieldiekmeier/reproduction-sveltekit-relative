@@ -8,12 +8,11 @@ console.table({ dev, relative })
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter({
-      paths: {
-        base: dev ? '' : '/build',
-        relative,
-      },
-    }),
+    adapter: adapter(),
+    paths: {
+      base: dev ? '' : '/build',
+      relative,
+    },
   },
 }
 
